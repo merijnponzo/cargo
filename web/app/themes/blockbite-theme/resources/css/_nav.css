@@ -4,7 +4,7 @@
 /* main menu en submenu dropdown */
 .menu {
     > ul{
-        @apply  hidden lg:flex sm:justify-end gap-24 lg:gap-8 relative z-50 py-8 px-32 bg-opacity-60 rounded-xl;
+        @apply  hidden lg:flex sm:justify-end gap-24 lg:gap-8 relative z-50 py-8 px-32 bg-opacity-60 rounded-xl items-center;
     }
     &.open {
         li{
@@ -116,12 +116,12 @@
 }
 /* arrows */
 .scrollslide--nav--right{
-    @apply w-48 h-48 block absolute right-0 bg-primary hover:opacity-50 top-1/2 pointer-events-auto;
+    @apply w-48 h-48 block absolute right-32 bg-primary hover:opacity-50 top-1/2 pointer-events-auto;
     -webkit-mask-image: url('../resources/img/svg/arrow-right.svg');
     mask-image: url('../resources/img/svg/arrow-right.svg');
 }
 .scrollslide--nav--left{
-    @apply w-48 h-48 block absolute -left-16  bg-primary hover:opacity-50 top-1/2 pointer-events-auto;
+    @apply w-48 h-48 block absolute -left-32  bg-primary hover:opacity-50 top-1/2 pointer-events-auto;
     -webkit-mask-image: url('../resources/img/svg/arrow-left.svg');
     mask-image: url('../resources/img/svg/arrow-left.svg');
 }
