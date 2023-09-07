@@ -9,7 +9,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+:root{
+    --plyr-video-background:rgba(0,0,0,0);
+}
 /* wp-block-post */
 .wp-block-post{
     @apply relative hover:opacity-80;
