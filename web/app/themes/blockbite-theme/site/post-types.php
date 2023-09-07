@@ -82,7 +82,7 @@ class sitePostTypes
                 'template' => [],
                 'rewrite' =>
                 array(
-                    'slug' => 'cases',
+                    'slug' => 'blog',
                     'with_front' => false
                 ),
             ]

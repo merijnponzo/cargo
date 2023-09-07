@@ -11,7 +11,7 @@
             @apply xl:relative;
         }
         ul {
-            @apply fixed top-0  left-0 h-screen w-full bg-black bg-opacity-90  flex flex-col justify-center items-center gap-4 ;
+            @apply fixed top-0 left-0 h-screen w-full bg-primary-dark bg-opacity-90  flex flex-col justify-center items-center gap-4 ;
             animation-name: slideLeft;
             animation-duration: 0.25s;
         }
@@ -20,7 +20,7 @@
         }
     }
     a{
-        @apply flex gap-2 items-center p-16 font-expressive text-current text-standard-xl lg:text-standard hover:text-primary xl:hover:bg-white hover:rounded-xl;
+        @apply text-white xl:text-primary flex gap-2 items-center p-16 font-expressive text-current text-standard-xl lg:text-standard hover:text-primary xl:hover:bg-white hover:rounded-xl;
     }
     .angle-down{
         @apply fill-current w-32 h-32 transform transition-all duration-300 ease-in-out;
@@ -50,7 +50,7 @@
             @apply  text-white xl:text-primary text-standard;
         }
         p{
-            @apply  text-standard select-none;
+            @apply  text-white xl:text-primary text-standard select-none;
         }
        
     }
