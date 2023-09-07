@@ -1,6 +1,9 @@
 // * IS ALSO LOADED IN WP_ADMIN, BEWARE OF GLOBAL ELEMENTS */
 document.addEventListener('DOMContentLoaded', () => {
 
+	const player = new Plyr('video', {captions: {active: true}});
+	
+	
 	setTopNavScroll(-100)
 	hexagonScroll()
 
