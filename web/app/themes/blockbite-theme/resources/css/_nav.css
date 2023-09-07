@@ -47,10 +47,10 @@
     li{
         @apply xl:ring-1 ring-primary-light hover:ring-1 hover:ring-primary rounded-xl p-4 select-none;
         h5 {
-            @apply  text-white xl:text-primary text-standard;
+            @apply  text-white xl:text-primary text-standard font-400;
         }
         p{
-            @apply  text-white xl:text-primary text-standard select-none;
+            @apply  text-white xl:text-primary text-standard select-none font-400;
         }
        
     }

@@ -147,6 +147,13 @@
 							"fontStretch": "normal",
 							"src": [ "file:./resources/fonts/Poppins-Bold.woff2" ]
 						},
+						{
+							"fontFamily": "Poppins",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./resources/fonts/Poppins-Medium.woff2" ]
+						},
                         {
 							"fontFamily": "Axiforma",
 							"fontWeight": "500",
@@ -279,7 +286,7 @@
 				"typography": {
 					"fontSize":"var(--wp--preset--font-size--standard-xl)",
 					"fontFamily": "var(--wp--preset--font-family--expressive)",
-					"fontWeight": "500",
+					"fontWeight": "700",
 					"lineHeight": "1.25"
 				},
 				"spacing": {
