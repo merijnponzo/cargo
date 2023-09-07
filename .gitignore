@@ -1,0 +1,34 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/ai1wm-backups
+web/app/uploads/*
+web/app/languages/*
+!web/app/uploads/.gitkeep
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+vendor
+
+
+node_modules
+
+# WP-CLI
+wp-cli.local.yml
+
+
+!web/app/plugins/blockbite-dev/
+

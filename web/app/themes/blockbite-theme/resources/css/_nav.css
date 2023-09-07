@@ -1,0 +1,162 @@
+/* alpine helper */
+[x-cloak] { display: none !important; }
+
+/* main menu en submenu dropdown */
+.menu {
+    > ul{
+        @apply  hidden lg:flex sm:justify-end gap-24 lg:gap-8 relative z-50 py-8 px-32 bg-opacity-60 rounded-xl;
+    }
+    &.open {
+        li{
+            @apply xl:relative;
+        }
+        ul {
+            @apply fixed top-0  left-0 h-screen w-full bg-black bg-opacity-90  flex flex-col justify-center items-center gap-4 ;
+            animation-name: slideLeft;
+            animation-duration: 0.25s;
+        }
+        .submenu--wrap{
+            @apply absolute top-0 left-0  z-50;
+        }
+    }
+    a{
+        @apply flex gap-2 items-center p-16 font-expressive text-current text-standard-xl lg:text-standard hover:text-primary xl:hover:bg-white hover:rounded-xl;
+    }
+    .angle-down{
+        @apply fill-current w-32 h-32 transform transition-all duration-300 ease-in-out;
+    }
+    .angle-down.open{
+        @apply rotate-180;
+    }
+    img{
+        @apply w-32 h-32;
+    } 
+}
+.submenu--wrap{
+    @apply absolute hidden;
+}
+.submenu--wrap.open{
+    @apply block p-16;
+ 
+ }
+.submenu--closemobile{
+    @apply sm:hidden;
+}
+.submenu{
+    @apply bg-white grid lg:grid-cols-1 p-8 rounded-xl gap-4 shadow-xl max-w-1024 mx-auto;
+    li{
+        @apply xl:ring-1 ring-primary-light hover:ring-1 hover:ring-primary rounded-xl p-4 select-none;
+        h5 {
+            @apply  text-white xl:text-primary text-standard;
+        }
+        p{
+            @apply  text-standard select-none;
+        }
+       
+    }
+}
+.menu--overlay{
+    @apply fixed top-0 left-0 bottom-0 right-0 w-full h-screen bg-black opacity-0 z-20 transition-all;
+}
+/* slide in header */
+@keyframes slideSubOpen {
+    from {transform:translateY(-5vw);}
+    to {transform:translateY(0px);}
+}
+@keyframes slideLeft {
+    from {transform:translateX(-50px);}
+    to {transform:translateX(0px);}
+}
+/* hamburger */
+.menu--burger{
+    @apply lg:hidden absolute  top-1/2 -translate-y-1/2 xl:align-middle right-24 z-50 h-[32px] w-[48px];
+    span{
+        @apply block w-[48px] h-[3px] bg-primary rounded-xl absolute transition-all duration-300 ease-in-out;
+    }
+    span:nth-child(1){
+        @apply top-0;
+    }
+    span:nth-child(2){
+        @apply top-1/2 transform -translate-y-1/2;
+    }
+    span:nth-child(3){
+        @apply bottom-0;
+    }
+}
+.menu.open {
+    .menu--burger span{
+      @apply bg-white;
+    }
+    svg{
+        @apply fill-current text-white;
+    }
+}
+
+.menu.open .menu--burger span:nth-child(1){
+    @apply rotate-45 translate-y-[14px];
+}
+.menu.open .menu--burger span:nth-child(2){
+    @apply opacity-0;
+}
+.menu.open .menu--burger span:nth-child(3){
+    @apply -rotate-45 -translate-y-[14px];
+}
+
+
+
+/* slider display is arranged within blockbite */
+.scrollslide--nav{
+    @apply flex justify-center gap-8 z-[400] items-end absolute top-0 left-0 w-full h-full pointer-events-none;
+}
+.scrollslide--button{
+    @apply w-[16px] h-[16px] flex justify-center items-center rounded-full ring-2 ring-primary-dark pointer-events-auto;
+}
+.scrollslide--button.is-current{
+    @apply bg-primary;
+}
+/* arrows */
+.scrollslide--nav--right{
+    @apply w-48 h-48 block absolute right-0 bg-primary hover:opacity-50 top-1/2 pointer-events-auto;
+    -webkit-mask-image: url('../resources/img/svg/arrow-right.svg');
+    mask-image: url('../resources/img/svg/arrow-right.svg');
+}
+.scrollslide--nav--left{
+    @apply w-48 h-48 block absolute -left-16  bg-primary hover:opacity-50 top-1/2 pointer-events-auto;
+    -webkit-mask-image: url('../resources/img/svg/arrow-left.svg');
+    mask-image: url('../resources/img/svg/arrow-left.svg');
+}
+.smooth-scroll{
+    @apply scroll-smooth;
+}
+.scrollslide--desktop img, .scrollslide--dektop picture, .scrollslide--desktop > div{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    -ms-user-drag: none;
+    user-drag: none;
+    user-select: none;
+}
+
+.scrollslide--drag{
+    @apply bg-primary w-160 h-32 absolute bottom-0 left-0 z-20 pointer-events-auto hover:bg-primary-medium cursor-grab xs:hidden;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    &:after{
+        content:'⟷';
+        @apply text-white font-expressive text-standard text-center select-none pl-64;
+    }
+}
+
+/* hide slider scrollbar */
+[data-snap-slider]{
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+[data-snap-slider]::-webkit-scrollbar {
+    opacity: 0;
+    display: none;
+  }

@@ -1,0 +1,19 @@
+@import "_custom.css";
+@import "_layout.css";
+@import "_nav.css";
+@import "_typography.css";
+@import "_form.css";
+@import "_reset.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* wp-block-post */
+.wp-block-post{
+    @apply relative hover:opacity-80;
+    img {
+        @apply rounded-xl overflow-hidden transform scale-100 hover:scale-105 transition-all duration-300 ease-in-out;
+    }
+}

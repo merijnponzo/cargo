@@ -1,0 +1,118 @@
+@tailwind components;
+@tailwind utilities;
+
+html{
+    @apply h-full;
+}
+body{
+    @apply font-productive leading-normal font-400;
+    font-size:16px;
+}
+header{
+    @apply z-[100] fixed top-0 w-full bg-primary-light;
+}
+main{
+    @apply flex-1 pt-[110px];
+    margin-block-start:0px!important;
+}
+/* minimal screen height for content layout*/
+.wp-site-blocks{
+    @apply min-h-screen flex flex-col;
+}
+.wp-block-post-content{
+    @apply flex-1;
+}
+
+.site-logo{
+    @apply  w-128 xl:w-192  text-primary transform-gpu transition-all;
+}
+/* sticky header */
+body:not(.wp-admin) .site-header{
+    @apply fixed;
+}
+.site-header{
+    @apply w-full z-50 transition-all transform-gpu top-0 py-16 my-0;
+    .site-logo{
+        @apply fill-secondary-dark text-secondary-dark;
+    }
+}
+
+/* different color on homepage */
+.home .site-header{
+    @apply bg-secondary-dark;
+    .menu > ul{
+        @apply text-white;
+    }
+    .site-logo{
+        @apply fill-white text-white;
+    }
+    .submenu--wrap{
+        p, h5 {
+            @apply lg:text-primary-dark;
+        }
+        svg{
+            @apply text-primary fill-current;
+        }
+    }
+    .menu--burger span{
+        @apply bg-white;
+    }
+}
+.scroll-out.down {
+    @apply fixed -top-144 w-full;
+    .site-logo{
+        @apply  w-144 xl:w-192;
+    }
+}
+.scroll-out.up {
+    @apply fixed top-0 w-full;
+    .site-logo{
+        @apply w-144 xl:w-192;
+    }
+}
+/* slide in header */
+@keyframes slideIn {
+    from {transform:translateY(-50px);}
+    to {transform:translateY(0px);}
+}
+
+/* footer */
+.site-footer {
+    margin-block-start:0px!important;
+}
+.site-footer .wp-block-column{
+    @apply mb-64;
+}
+.site-footer ul a{
+    @apply font-400 hover:underline;
+}
+
+/* archive */
+.archive #main{
+    .tag-cloud-link{
+        @apply border-2  hover:ring-2 hover:ring-primary rounded-full;
+    }
+    .wp-block-query {
+        ul.wp-block-post-template{
+            @apply grid grid-cols-1 lg:grid-cols-3 gap-64;
+        }
+        .wp-block-post{
+            @apply  relative w-full;
+            .wp-block-read-more{
+                @apply btn-primary btn-small;
+            }
+            .wp-block-post-featured-image{
+                @apply rounded-2xl overflow-hidden;
+            }
+            .wp-block-read-more::after{
+                content:"";
+                @apply absolute top-0 left-0 w-full h-full;
+            }
+        }
+    }
+}
+
+
+.contact iframe{
+    @apply w-full h-full;
+}

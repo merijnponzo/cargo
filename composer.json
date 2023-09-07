@@ -1,0 +1,100 @@
+{
+  "name": "roots/bedrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate with Composer, easier configuration, and an improved folder structure",
+  "homepage": "https://roots.io/bedrock/",
+  "authors": [
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    },
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    }
+  ],
+  "keywords": [
+    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/bedrock/issues",
+    "forum": "https://discourse.roots.io/category/bedrock"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:merijnponzo/blockbite.git",
+      "no-api": true
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "composer/installers": "^2.1",
+    "vlucas/phpdotenv": "^5.4",
+    "oscarotero/env": "^2.1",
+    "roots/bedrock-autoloader": "^1.0",
+    "roots/bedrock-disallow-indexing": "^2.0",
+    "roots/wordpress": "6.2.2",
+    "roots/wp-config": "1.0.0",
+    "roots/wp-password-bcrypt": "1.1.0",
+    "wpackagist-plugin/jetformbuilder": "*",
+    "wpackagist-plugin/spinupwp": "^1.3",
+    "wpackagist-plugin/enable-media-replace": "^3.6",
+    "wpackagist-plugin/resize-image-after-upload": "^1.8",
+    "wpackagist-plugin/all-in-one-wp-migration": "^7.58",
+    "wpackagist-plugin/post-smtp": "^2.0",
+    "wpackagist-plugin/wp-seopress": "^5.6",
+    "wpackagist-plugin/safe-svg":"*",
+    "wpackagist-plugin/redirection":"*",
+    "wpackagist-plugin/duplicate-post":"^4.1.2",
+    "wpackagist-plugin/limit-login-attempts-reloaded": "^2.24",
+    "blockbite/blockbite": "dev-main"
+  },
+  
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "composer/installers": true,
+      "roots/wordpress-core-installer": true,
+      "ffraenz/private-composer-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "test": [
+      "phpcs"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+@tailwind components;
+@tailwind utilities;
+
+
+h1  {
+    @apply font-500 text-large font-expressive leading-normal;
+}
+h2, h3, h4, h5, h6{
+    @apply font-500 text-standard-xl font-expressive leading-normal;
+}
+p{
+    @apply font-400 text-standard font-productive leading-normal;
+}
+span{
+    @apply leading-normal;
+}
+strong, b{
+    @apply font-500;
+}
+
+.wp-block-blockbite-group ul{
+    @apply list-disc space-y-8 marker:text-primary;
+}
+
+p:empty {
+    line-height: 1.5; /* Adjust the value as needed */
+    @apply block min-h-16 w-full;
+  }

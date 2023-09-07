@@ -1,0 +1,17 @@
+@tailwind components;
+@tailwind utilities;
+
+.jet-fb-form-block{
+    @apply w-full;
+}
+.jet-form-builder{
+    input, textarea, select{
+        @apply border-2 block my-32 border-gray-300 bg-slate-200 bg-opacity-50 rounded-lg p-8 focus:ring-primary active:ring-primary;
+    }
+    .jet-form-builder-row{
+        @apply my-16;
+    }
+    button{
+        @apply rounded-xl bg-primary flex justify-center items-center p-8 text-white hover:bg-primary-dark w-full;
+    }
+}

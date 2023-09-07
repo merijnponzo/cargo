@@ -1,0 +1,126 @@
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .btn {
+        @apply rounded-2xl uppercase font-500 text-center text-white font-expressive text-standard px-8 py-8 flex justify-center items-center ring-1 ring-current gap-8 hover:ring-2 hover:scale-105 transition-all;
+    }
+    .btn-primary{
+        @apply btn bg-primary hover:bg-primary-dark text-white;
+    }
+    .btn-small{
+        @apply btn text-sm px-16 py-8;
+    }
+    .cargo-1{
+        mask: url('../resources/cargo/cargo-1.svg');
+        mask-repeat: no-repeat;
+        mask-size:cover;
+    }
+    .cargo-2{
+        mask: url('../resources/cargo/cargo-2_large.svg');
+        mask-repeat: no-repeat;
+        mask-size:cover;
+    }
+   
+}
+.menu .btn__primary{
+    @apply btn-primary text-white px-16;
+}
+
+/* buttons */
+.wp-element-button{
+    @apply btn;
+    svg{
+        @apply w-32 h-32;
+    }
+}
+
+.wp-element-button.is-style-default{
+    @apply bg-background-dark hover:ring-2 hover:ring-primary;
+}
+.wp-element-button.is-style-outline{
+    @apply border-2 ring-secondary text-secondary ring-2 hover:ring-secondary bg-transparent hover:ring-2;
+}
+.wp-element-button.is-style-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+}
+/* query block */
+#site .wp-block-query{
+    ul {
+        @apply gap-64 grid grid-cols-2;
+    }
+    .wp-block-post{
+        @apply w-full;
+        /* odd li padding */
+        &:nth-child(even){
+            @apply lg:pt-64;
+        }
+    }
+}
+.wp-block-post-featured-image{
+    @apply w-full h-320 md:h-432 lg:h-368 xl:h-480;
+    img{
+        @apply w-full h-full object-cover
+    }
+}
+/* image styles */
+.wp-block-image.is-style-cargo img{
+    @apply cargo-1;
+}
+.wp-block-blockbite-visual.is-style-cargo img{
+    @apply cargo-1;
+}
+.wp-block-blockbite-group.is-style-cargo{
+    @apply cargo-2;
+}
+.wp-block-blockbite-visual{
+    @apply rounded-2xl overflow-hidden;
+}
+
+.wp-block-heading.is-style-cargo{
+    @apply rounded-full w-64 h-64 flex justify-center p-8 my-8 bg-primary relative items-center text-white z-0;
+}
+.wp-block-heading.is-style-chapter{
+    @apply mx-auto max-w-640 my-8;
+}
+.wp-block-post-title.is-style-cargo{
+    @apply absolute top-4 left-0 z-10 p-16 bg-primary text-white transform -rotate-6 text-standard;
+}
+
+
+
+/* effect */
+.textscrubber .group--content > .wp-element-icon{
+    @apply mix-blend-multiply;
+}
+
+@screen xs{
+    .textscrubber{
+        @apply overflow-hidden;
+    }
+    .textscrubber .group--content{
+        @apply w-960 -translate-x-320 scale-75 gap-16;
+    }
+}
+
+.sticky-group > .group--content{
+    @apply h-auto sticky top-0 ;
+    position: sticky!important;
+}
+
+#main .cargo--banner{
+    /* first group */
+    .wp-block-blockbite-group:nth-child(1){
+        @apply  cargo-2 rounded-xl overflow-hidden ;
+    }
+    video{
+        @apply absolute top-0 left-0 w-full h-full mix-blend-multiply object-cover;
+    }
+    .group--video{
+        @apply bg-primary-light;
+    }
+    &::before{
+        @apply bg-primary-light absolute top-0 left-0 h-1/2 w-full content-[''];
+    }
+}

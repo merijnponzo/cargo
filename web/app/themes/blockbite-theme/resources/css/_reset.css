@@ -1,0 +1,4 @@
+
+.wp-site-blocks > * + * {
+    margin-block-start: 0rem!important;
+}
