@@ -114,13 +114,4 @@
     .wp-block-blockbite-group:nth-child(1){
         @apply  cargo-2 rounded-xl overflow-hidden ;
     }
-    video{
-        @apply absolute top-0 left-0 w-full h-full mix-blend-multiply object-cover;
-    }
-    .group--video{
-        @apply bg-primary-light;
-    }
-    &::before{
-        @apply bg-primary-light absolute top-0 left-0 h-1/2 w-full content-[''];
-    }
 }
