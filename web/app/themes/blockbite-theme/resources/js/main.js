@@ -2,10 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 	const player = new Plyr('video', {captions: {active: true}});
-	
-	
 	setTopNavScroll(-100)
-	hexagonScroll()
+	// hexagonScroll()
 
 })
 
@@ -13,7 +11,6 @@ const setTopNavScroll = (percentage) => {
 	// scrollbar
 	const header = document.querySelector('header')
 
-	console.log(header)
 	const toolBar = gsap
 		.from(header, {
 			yPercent: percentage,
@@ -36,6 +33,7 @@ const setTopNavScroll = (percentage) => {
 	})
 }
 
+/*
 const hexagonScroll = (text) => {
 	const svg = document.querySelector(".hexagon-animation");
 	if (svg) {
@@ -54,9 +52,9 @@ const hexagonScroll = (text) => {
 						duration: 1,
 						drawSVG: '100%',
 						rotation: 0,
-						delay: index * 0.01, // Adjust the stagger delay as needed
-						strokeWidth: 20,
-						opacity: 1,
+						delay: index * 0.02, // Adjust the stagger delay as needed
+						strokeWidth: 2,
+						opacity: 0.1,
 						rotationZ: 360,
 						ease: "power3.inOut"
 					});
@@ -70,3 +68,4 @@ const hexagonScroll = (text) => {
 		});
 	}
 }
+*/

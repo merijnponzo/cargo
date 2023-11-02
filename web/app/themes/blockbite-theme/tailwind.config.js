@@ -13,6 +13,7 @@ const theme = themeParser(themeJson, false);
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./blocks/**/*.{html,js,php}', './templates/**/*.{html,js,php}', './parts/**/*.{html,js,php}'],
+  important: '.bite',
   safelist: [],
   theme: {
     fontFamily: theme.fonts,
