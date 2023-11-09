@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:merijnponzo/blockbite.git",
-                "reference": "d78f5226126266c8f2893317c17bdb2d0e48c194"
+                "reference": "a21e7fa361bfc70ffc415408537fc952a87ad07e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/merijnponzo/blockbite/zipball/d78f5226126266c8f2893317c17bdb2d0e48c194",
-                "reference": "d78f5226126266c8f2893317c17bdb2d0e48c194",
+                "url": "https://api.github.com/repos/merijnponzo/blockbite/zipball/a21e7fa361bfc70ffc415408537fc952a87ad07e",
+                "reference": "a21e7fa361bfc70ffc415408537fc952a87ad07e",
                 "shasum": ""
             },
             "require": {
@@ -70,7 +70,7 @@
                 "source": "https://github.com/GITHUB_ORG/GITHUB_REPO",
                 "issues": "https://github.com/GITHUB_ORG/GITHUB_REPO/issues"
             },
-            "time": "2023-11-03T11:37:20+00:00"
+            "time": "2023-11-09T15:02:03+00:00"
         },
         {
             "name": "composer/installers",
@@ -1276,15 +1276,15 @@
         },
         {
             "name": "wpackagist-plugin/post-smtp",
-            "version": "2.7.2",
+            "version": "2.7.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/post-smtp/",
-                "reference": "tags/2.7.2"
+                "reference": "tags/2.7.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/post-smtp.2.7.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/post-smtp.2.7.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1390,12 +1390,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "2f42c940aab53728fa307ebd78c42494fcd663d1"
+                "reference": "c94f18868ecd2096eb16794d766a6371f42a846c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/2f42c940aab53728fa307ebd78c42494fcd663d1",
-                "reference": "2f42c940aab53728fa307ebd78c42494fcd663d1",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/c94f18868ecd2096eb16794d766a6371f42a846c",
+                "reference": "c94f18868ecd2096eb16794d766a6371f42a846c",
                 "shasum": ""
             },
             "conflict": {
@@ -1532,11 +1532,12 @@
                 "ezsystems/ezplatform-admin-ui": ">=1.3,<1.3.5|>=1.4,<1.4.6|>=1.5,<1.5.29|>=2.3,<2.3.26",
                 "ezsystems/ezplatform-admin-ui-assets": ">=4,<4.2.1|>=5,<5.0.1|>=5.1,<5.1.1",
                 "ezsystems/ezplatform-graphql": ">=1.0.0.0-RC1-dev,<1.0.13|>=2.0.0.0-beta1,<2.3.12",
-                "ezsystems/ezplatform-kernel": "<1.2.5.1-dev|>=1.3,<1.3.26",
+                "ezsystems/ezplatform-kernel": "<1.2.5.1-dev|>=1.3,<1.3.34",
                 "ezsystems/ezplatform-rest": ">=1.2,<=1.2.2|>=1.3,<1.3.8",
                 "ezsystems/ezplatform-richtext": ">=2.3,<2.3.7.1-dev",
+                "ezsystems/ezplatform-solr-search-engine": ">=1.7,<1.7.12|>=2,<2.0.2|>=3.3,<3.3.15",
                 "ezsystems/ezplatform-user": ">=1,<1.0.1",
-                "ezsystems/ezpublish-kernel": "<6.13.8.2-dev|>=7,<7.5.30",
+                "ezsystems/ezpublish-kernel": "<6.13.8.2-dev|>=7,<7.5.31",
                 "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.6,<=2019.03.5.1",
                 "ezsystems/platform-ui-assets-bundle": ">=4.2,<4.2.3",
                 "ezsystems/repository-forms": ">=2.3,<2.3.2.1-dev|>=2.5,<2.5.15",
@@ -1555,10 +1556,11 @@
                 "flarum/mentions": "<1.6.3",
                 "flarum/sticky": ">=0.1.0.0-beta14,<=0.1.0.0-beta15",
                 "flarum/tags": "<=0.1.0.0-beta13",
+                "floriangaerber/magnesium": "<0.3.1",
                 "fluidtypo3/vhs": "<5.1.1",
                 "fof/byobu": ">=0.3.0.0-beta2,<1.1.7",
                 "fof/upload": "<1.2.3",
-                "foodcoopshop/foodcoopshop": "<3.6.1",
+                "foodcoopshop/foodcoopshop": ">=3.2,<3.6.1",
                 "fooman/tcpdf": "<6.2.22",
                 "forkcms/forkcms": "<5.11.1",
                 "fossar/tcpdf-parser": "<6.2.22",
@@ -1603,9 +1605,10 @@
                 "httpsoft/http-message": "<1.0.12",
                 "hyn/multi-tenant": ">=5.6,<5.7.2",
                 "ibexa/admin-ui": ">=4.2,<4.2.3",
-                "ibexa/core": ">=4,<4.0.7|>=4.1,<4.1.4|>=4.2,<4.2.3",
+                "ibexa/core": ">=4,<4.0.7|>=4.1,<4.1.4|>=4.2,<4.2.3|>=4.5,<4.5.4",
                 "ibexa/graphql": ">=2.5,<2.5.31|>=3.3,<3.3.28|>=4.2,<4.2.3",
                 "ibexa/post-install": "<=1.0.4",
+                "ibexa/solr": ">=4.5,<4.5.4",
                 "ibexa/user": ">=4,<4.4.3",
                 "icecoder/icecoder": "<=8.1",
                 "idno/known": "<=1.3.1",
@@ -1687,7 +1690,7 @@
                 "melisplatform/melis-front": "<5.0.1",
                 "mezzio/mezzio-swoole": "<3.7|>=4,<4.3",
                 "mgallegos/laravel-jqgrid": "<=1.3",
-                "microweber/microweber": "<2",
+                "microweber/microweber": "<2.0.3",
                 "miniorange/miniorange-saml": "<1.4.3",
                 "mittwald/typo3_forum": "<1.2.1",
                 "mobiledetect/mobiledetectlib": "<2.8.32",
@@ -1778,6 +1781,7 @@
                 "pocketmine/pocketmine-mp": "<=4.23|>=5,<5.3.1",
                 "pressbooks/pressbooks": "<5.18",
                 "prestashop/autoupgrade": ">=4,<4.10.1",
+                "prestashop/blockreassurance": "<=5.1.3",
                 "prestashop/blockwishlist": ">=2,<2.1.1",
                 "prestashop/contactform": ">=1.0.1,<4.3",
                 "prestashop/gamification": "<2.3.2",
@@ -2069,7 +2073,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-11-02T21:04:20+00:00"
+            "time": "2023-11-08T20:04:29+00:00"
         }
     ],
     "aliases": [],
